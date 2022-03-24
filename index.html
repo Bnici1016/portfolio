@@ -1,0 +1,72 @@
+<!doctype html>
+<title>Portfolio Site</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+  grid-template-rows: 80px 1fr 70px;  
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }  
+	
+header, footer, article, nav, div {
+  padding: 1.2em;
+  background: white;
+  }
+	
+header {
+   font-size: 50px;		
+	}
+#pageHeader {
+  grid-area: header;
+  }
+#pageFooter {
+  grid-area: footer;
+  }
+#mainWork { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteTest { 
+  grid-area: ads; 
+  } 
+
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+	
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
+<body>
+  <header id="pageHeader">Hello, I'm Bryttany.<br>Digital Designer</header>
+  <article id="mainWork">Recent Work</article>
+  <nav id="mainNav"><ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">About</a></li>
+  <li><a href="contact.asp">Portfolio</a></li>
+  <li><a href="about.asp">Contact</a></li>
+</ul></nav>
+  <div id="siteTest">Testimonials</div>
+  <footer id="pageFooter">Contact Me</footer>
+</body>
+</html>
